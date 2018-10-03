@@ -167,6 +167,13 @@ export class Props {
   public onSwipeDown?: () => void = () => {
     //
   };
+
+  /**
+   * function that call back when Pan Responder Created
+   */
+  public onPanResponderCreated?: (imagePanResponder?: object) => void = () => {
+      //
+  };
 }
 
 export class State {

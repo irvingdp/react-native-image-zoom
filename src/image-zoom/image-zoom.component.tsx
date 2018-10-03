@@ -456,6 +456,7 @@ export default class ImageViewer extends React.Component<Props, State> {
         //
       }
     });
+    this.props.onPanResponderCreated && this.props.onPanResponderCreated(this.imagePanResponder);
   }
 
   public resetScale = () => {
@@ -561,6 +562,7 @@ export default class ImageViewer extends React.Component<Props, State> {
     if (this.props.centerOn) {
       this.centerOn(this.props.centerOn);
     }
+    this.imageDidMove('componentDidMount');
   }
 
   public componentWillReceiveProps(nextProps: Props) {
